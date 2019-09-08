@@ -1,4 +1,7 @@
-node_modules
+dist
 env.ts
-Thumbs.db
-.env
+node_modules
+npm-debug.log
+test-results/
+types/graphql.d.ts
+types/unsplash.d.ts
