@@ -1,0 +1,21 @@
+# https://medium.com/the-guild/graphql-scalars-1-0-is-out-more-types-data-integrity-and-strict-validations-on-graphql-972079428fb
+# https://github.com/urigo/graphql-scalars
+scalar Date
+scalar URL
+
+type Chat {
+  id: ID!
+  name: String!
+  picture: URL
+  lastMessage: Message
+}
+
+type Message {
+  id: ID!
+  content: String!
+  createdAt: Date!
+}
+
+type Query {
+  chats: [Chat!]! # The outer exclamation mark means that if you run this query it will always return an array of zero or more items (never null) and inner exclamation mark means that every item of returned array will be of type Chat and never be null.
+}
